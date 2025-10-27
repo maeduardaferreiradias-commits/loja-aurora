@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Loja Aurora — Produtos</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- JS -->
+  <script src="app.js" defer></script>
+</head>
+<body class="theme-light">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><span class="logo-mark">🌙</span> Loja Aurora</a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produtos.html" aria-current="page">Produtos</a></li>
+          <li><a href="quem-somos.html">Quem Somos</a></li>
+          <li><a href="contato.html">Fale Conosco</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" class="btn small" aria-label="Alternar tema">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero container">
+    <div>
+      <h1>Nossos Produtos</h1>
+      <p class="lead">Explore todos os produtos da Loja Aurora. Use a busca ou filtre por preço, nome e categoria para encontrar exatamente o que você procura.</p>
+    </div>
+    <img src="PPD.jpg" alt="Produtos Loja Aurora">
+  </section>
+
+  <!-- CONTROLS -->
+  <section class="controls container">
+    <div class="control-row">
+      <input type="search" id="search" placeholder="Buscar produtos..." />
+      <select id="sort">
+        <option value="relevance">Ordenar por relevância</option>
+        <option value="name-asc">Nome A → Z</option>
+        <option value="name-desc">Nome Z → A</option>
+        <option value="price-asc">Preço ↑</option>
+        <option value="price-desc">Preço ↓</option>
+      </select>
+      <div class="controls-right" id="results-count">Mostrando <strong>0</strong> produtos</div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section class="products container">
+    <div class="section-header">
+      <h2>Todos os Produtos</h2>
+    </div>
+    <div id="products-list" class="products-grid">
+      <!-- Cards gerados via app.js -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>#<span id="year"></span> Loja Aurora — Aqui você encontra o melhor.</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

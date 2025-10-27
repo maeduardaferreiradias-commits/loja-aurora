@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Loja Aurora — Home</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- JS -->
+  <script src="app.js" defer></script>
+</head>
+<body class="theme-light">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><span class="logo-mark">🌙</span> Loja Aurora</a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="quem-somos.html">Quem Somos</a></li>
+          <li><a href="contato.html">Fale Conosco</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" class="btn small" aria-label="Alternar tema">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero container">
+    <div>
+      <h1>Bem-vindo à Loja Aurora</h1>
+      <p class="lead">Produtos selecionados para quem busca elegância, qualidade e bem-estar. Descubra novidades exclusivas e transforme seu dia a dia.</p>
+      <a href="produtos.html" class="btn primary">Ver Produtos</a>
+    </div>
+    <img src="PPD.jpg" alt="Produtos Loja Aurora">
+  </section>
+
+  <!-- CONTROLS (Busca e Ordenação) -->
+  <section class="controls container">
+    <div class="control-row">
+      <input type="search" id="search" placeholder="Buscar produtos..." />
+      <select id="sort">
+        <option value="relevance">Ordenar por relevância</option>
+        <option value="name-asc">Nome A → Z</option>
+        <option value="name-desc">Nome Z → A</option>
+        <option value="price-asc">Preço ↑</option>
+        <option value="price-desc">Preço ↓</option>
+      </select>
+      <div class="controls-right" id="results-count">Mostrando <strong>0</strong> produtos</div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS DINÂMICOS -->
+  <section class="products container">
+    <div class="section-header">
+      <h2>Destaques</h2>
+    </div>
+    <div id="products-list" class="products-grid">
+      <!-- Cards gerados via app.js -->
+    </div>
+  </section>
+
+  <!-- SOBRE A LOJA -->
+  <section class="about container">
+    <h2>Sobre a Loja Aurora</h2>
+    <p class="lead">Na Aurora, buscamos oferecer produtos que aliam estética e funcionalidade. Cada item é cuidadosamente selecionado, garantindo que nossos clientes recebam qualidade e estilo em todos os detalhes.</p>
+  </section>
+
+  <!-- FAQ DESTAQUES -->
+  <section class="faq container">
+    <h2>Perguntas Frequentes</h2>
+    <div class="faq-controls" style="margin-bottom:.75rem;">
+      <button id="faq-open-all" class="btn small ghost">Abrir todos</button>
+      <button id="faq-close-all" class="btn small ghost">Fechar todos</button>
+      <span id="faq-counter" style="margin-left:1rem; font-size:.95rem;">0 abertas</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Como faço para acompanhar meu pedido? <span class="toggle-icon">+</span></button>
+      <div class="faq-a">Você receberá um código de rastreio por e-mail assim que o pedido for enviado.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Posso trocar um produto? <span class="toggle-icon">+</span></button>
+      <div class="faq-a">Sim! Aceitamos trocas dentro de 30 dias a partir da data da compra.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Quais formas de pagamento são aceitas? <span class="toggle-icon">+</span></button>
+      <div class="faq-a">Cartões de crédito, boleto bancário e PIX.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Como faço para encomendar um produto? <span class="toggle-icon">+</span></button>
+      <div class="faq-a">Você pode encomendar um produto diretamente pelo nosso site, adicionando-o ao carrinho e seguindo as instruções de checkout.</div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>#<span id="year"></span> Loja Aurora — Aqui você encontra o melhor.</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
