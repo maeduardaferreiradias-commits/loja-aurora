@@ -1,5 +1,5 @@
 /* ==============================
-   Loja Aurora — styles.css (rework centralizado)
+   Doum Odara — styles.css (rework centralizado)
    Paleta: grafite / azul acinzentado / dourado discreto
    Tipografia: Playfair Display (headings) + Inter (body)
    ============================== */
@@ -198,3 +198,4 @@ input[type="search"], select {
   .logo { font-size:1rem; }
   .hero img { display:none; }
 }
+
